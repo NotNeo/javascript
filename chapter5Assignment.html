@@ -12,8 +12,8 @@
   var swiss = (0.969085);
   var mex = (16.834475);
 
-  function calc_exchange(usDollar, gbp) {
-    var gbp = parseFloat(usDollar * gbp);
+  function calc_exchange(usDollar, gbp, cad, aud, swiss, mex) {
+    var gbpX = parseFloat(usDollar * gbp);
     var cadX = parseFloat(usDollar * cad);
     var audX = parseFloat(usDollar * cad);
     var swissX = parseFloat(usDollar * cad);
