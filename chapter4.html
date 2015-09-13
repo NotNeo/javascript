@@ -11,14 +11,18 @@
   // var taxAmt = (hoursWorked * hourlyPay * tax);
   // var netPay = (hoursWorked * hourlyPay - taxAmt);
 
-    function calculate_pay(hoursWorked, hourlyPay, tax) {
-      var taxAmt = (hoursWorked * hourlyPay * tax);
+    function calculate_pay(hoursWorked, hourlyPay, tax, grossPay) {
+      var grossPay = (hoursWorked * hourlyPay);
+      var taxAmt = (grossPay * hourlyPay * tax);
       var netPay = (hoursWorked * hourlyPay - taxAmt);
       
-      return taxAmt, netPay;
+      return netPay;
     }
   
-  document.write(calculate_pay)
+  document.write("<h1><b>Hours Worked: " +hoursWorked+ "</b></h1>");
+  document.write("Hourly Rate: " +hourlyPay);
+  document.write("Tax Percentage: " +tax);
+  // document.write(the return of the function);
   </script>
 
 </body>
