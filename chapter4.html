@@ -7,14 +7,11 @@
   <script type="text/javascript">
   var hoursWorked = prompt("Enter hours worked:");
   var hourlyPay = prompt("Enter hourly rate:");
-  var tax = prompt("Enter tax percentage:") /100;
-  var taxFinal = tax.toFixed(2);
-  var taxAmt = (hoursWorked * hourlyPay * tax);
-  var taxAmtFinal = taxAmt.toFixed(2);
-  var netPay = (hoursWorked * hourlyPay - taxAmt);
-  var netPayFinal = netPay.toFixed(2);
+  var tax = prompt("Enter tax percentage:").toFixed(2) /100;
+  var taxAmt = (hoursWorked * hourlyPay * tax).toFixed(2);
+  var netPay = (hoursWorked * hourlyPay - taxAmt).toFixed(2);
 
-    function calculatePay(hoursWorked, hourlyPay, tax) {
+    function calculate_pay(hoursWorked, hourlyPay, tax) {
       var taxAmt = (hoursWorked * hourlyPay * tax);
       var netPay = (hoursWorked * hourlyPay - taxAmt);
       
@@ -23,8 +20,8 @@
   
   document.write("<h1><b>Hours Worked: " +hoursWorked+ "</b></h1><p>");
   document.write("<h1><b>Hourly Rate: " +hourlyPay+ "/hr</b></h1><p>");
-  document.write("<h1><b>Tax Rate Applied: " +taxAmtFinal+ "%</b></h1><p>");
-  document.write("<h1><b>Net Pay: $" +netPayFinal+ "</b></h1>");
+  document.write("<h1><b>Tax Rate Applied: " +taxAmt+ "%</b></h1><p>");
+  document.write("<h1><b>Net Pay: $" +netPay+ "</b></h1>");
 // Pretty sure i've hacked this to the point where i'm not even using the function anymore//
   </script>
 
