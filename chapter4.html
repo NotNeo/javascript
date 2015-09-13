@@ -5,24 +5,23 @@
 </head>
 <body style="background-color: lightgreen">
   <script type="text/javascript">
-  var hoursWorked = prompt("Enter hours worked:");
-  var hourlyPay = prompt("Enter hourly rate:");
-  var tax = prompt("Enter tax percentage:") /100;
-  // var taxAmt = (hoursWorked * hourlyPay * tax);
-  // var netPay = (hoursWorked * hourlyPay - taxAmt);
+  var hoursWorked = parseFloat(prompt("Enter hours worked:"));
+  var hourlyPay = parseFloat(prompt("Enter hourly rate:"));
+  var tax = parseInt(prompt("Enter tax percentage:")) /100;
+      // tax /= 100;
 
-    function calculate_pay(hoursWorked, hourlyPay, tax, grossPay) {
+    function calculate_pay(hoursWorked, hourlyPay, tax) {
       var grossPay = (hoursWorked * hourlyPay);
-      var taxAmt = (grossPay * hourlyPay * tax);
+      var taxAmt = (grossPay * tax);
       var netPay = (hoursWorked * hourlyPay - taxAmt);
       
       return netPay;
     }
   
   document.write("<h1><b>Hours Worked: " +hoursWorked+ "</b></h1>");
-  document.write("Hourly Rate: " +hourlyPay);
-  document.write("Tax Percentage: " +tax);
-  // document.write(the return of the function);
+  document.write("<p><h1>Hourly Rate: " +hourlyPay+ "</b></h1></p>");
+  document.write("<p><h1>Tax Percentage: " +(tax * 100)+ "%</b></h1></p>");
+  document.write("<p><h1>Net Pay: " +calculate_pay(hoursWorked, hourlyPay, tax)+ "</b></h1></p>");
   </script>
 
 </body>
