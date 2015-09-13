@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chapter 5 Assignment</title>
+</head>
+<body style="background-color: orange">
+<script type="text/javascript">
+  var usDollar = parseFloat(prompt("Amount of US dollars to convert:"));
+  var gbp = (0.64832).toFixed(2);
+  var cad = (0.88220).toFixed(2);
+  var aud = (1.41014).toFixed(2);
+  var swiss = (0.969085).toFixed(2);
+  var mex = (16.834475).toFixed(2);
+
+  function calc_exchange(usDollar, foreign) {
+    var result = usDollar * foreign;
+
+    return result;
+  }
+
+  document.write("<p>$"+usDollar+" in U.S. Currency is approximately equivalent to: </p>");
+  document.write("<p>"+(calc_exchange(usDollar, gbp)).toFixed(2)+" GBP (British Pounds) <img src='images/britishPound.gif'></p>");
+  document.write("<p>"+(calc_exchange(usDollar, cad)).toFixed(2)+" CAD (Canadian Dollars) <img src='images/canadianDollar.gif'></p>");
+  document.write("<p>"+(calc_exchange(usDollar, aud)).toFixed(2)+" AUD (Austrailian Dollars) <img src='images/australianDollar.gif'></p>");
+  document.write("<p>"+(calc_exchange(usDollar, swiss)).toFixed(2)+" CHF (Swiss Francs) <img src='images/swissFranc.gif'></p>");
+  document.write("<p>"+(calc_exchange(usDollar, mex)).toFixed(2)+" MXN (Mexican Pesos) <img src='images/mexicanPeso.gif'></p>");
+</script>
+
+</body>
+</html>
