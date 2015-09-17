@@ -6,11 +6,11 @@
 <body style="background-color: grey">
 
   <script type="text/javascript">
-    var grade1 = prompt("Input student grade for Exam 1:");
-    var grade2 = prompt("Input student grade for Exam 2:");
-    var grade3 = prompt("Input student grade for Exam 3:");
+    var grade1 = prompt(parseInt("Input student grade for Exam 1:"));
+    var grade2 = prompt(parseInt("Input student grade for Exam 2:"));
+    var grade3 = prompt(parseInt("Input student grade for Exam 3:"));
 
-    average = parseInt((grade1 + grade2 + grade3) /3);
+    average = grade1 + grade2 + grade3 /3;
 
     var gradeLetter = "";
 
