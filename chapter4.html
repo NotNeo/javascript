@@ -6,22 +6,22 @@
 <body style="background-color: lightgreen">
   <script type="text/javascript">
   var hoursWorked = parseFloat(prompt("Enter hours worked:"));
-  var hourlyPay = parseFloat(prompt("Enter hourly rate:"));
+  var hourlyPay = parseFloat(prompt("Enter hourly rate:")).toFixed(2);
   var tax = parseInt(prompt("Enter tax percentage:")) /100;
       // tax /= 100;
 
     function calculate_pay(hoursWorked, hourlyPay, tax) {
       var grossPay = (hoursWorked * hourlyPay);
       var taxAmt = (grossPay * tax);
-      var netPay = (hoursWorked * hourlyPay - taxAmt);
+      var netPay = parseFloat(hoursWorked * hourlyPay - taxAmt).toFixed(2);
       
       return netPay;
     }
   
   document.write("<h1><b>Hours Worked: " +hoursWorked+ "</b></h1>");
-  document.write("<p><h1>Hourly Rate: " +hourlyPay+ "</b></h1></p>");
+  document.write("<p><h1>Hourly Rate: $" +hourlyPay+ "</b></h1></p>");
   document.write("<p><h1>Tax Percentage: " +(tax * 100)+ "%</b></h1></p>");
-  document.write("<p><h1>Net Pay: " +calculate_pay(hoursWorked, hourlyPay, tax)+ "</b></h1></p>");
+  document.write("<p><h1>Net Pay: $" +calculate_pay(hoursWorked, hourlyPay, tax)+ "</b></h1></p>");
   </script>
 
 </body>
