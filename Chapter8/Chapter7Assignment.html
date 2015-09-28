@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chapter 7 Assignement</title>
+  <script type="text/javascript">
+    var books = ["War and Peace", "Huckleberry Finn", "The Return of the Native", "A Christmas Carol", "Exodus"];
+    var authors = []; 
+  </script>
+</head>
+<body>
+<script type="text/javascript">
+
+      var author_title = []; 
+      for(var i = 0; i <= books.length - 1; i++) {
+        var author = prompt("Name the author of " + books[i] + "...");
+
+        authors[i] = author;
+        author_title[i] = authors[i] + " wrote " + books[i] + "<br>";
+      }
+      for(var k = 0; k <= 25; k++) {
+        document.write("<strong>*</strong>");
+      }
+      document.write("<br>");
+      for(var j = 0; j <= books.length - 1; j++) {
+        document.write('<strong>Book:</strong> ' + books[j] + ' <strong>Author</strong>: ' + authors[j] + '<br>');
+      }
+      for(var k = 0; k <= 25; k++) {
+        document.write("<strong>*</strong>");
+      }
+      document.write("<br>");
+      for(var L = 0; L <= author_title.length - 1; L++) {
+        document.write(author_title[L]);
+      }
+      author_title.pop();
+      for(var k = 0; k <= 25; k++) {
+        document.write("<strong>*</strong>");
+      }
+      document.write("<br>");
+      for(var L = 0; L <= author_title.length - 1; L++) {
+        document.write(author_title[L]);
+      }
+      author_title.sort();
+      for(var k = 0; k <= 25; k++) {
+        document.write("<strong>*</strong>");
+      }
+      document.write("<br>");
+      for(var L = 0; L <= author_title.length - 1; L++) {
+        document.write(author_title[L]);
+      }
+      for(var k = 0; k <= 25; k++) {
+        document.write("<strong>*</strong>");
+      }
+      document.write("<br>");
+</script>
+</body>
+</html>
