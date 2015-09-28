@@ -28,8 +28,8 @@
   var sex = prompt("What is your gender? M or F only");
       sex = sex.toLowerCase();
 
-  if (sex !=="m" || sex !=="f") {
-    checkSex(sex);
+  if(sex !=="m" || sex !=="f") {
+    checkSex(sex);  
     } 
 
 
@@ -60,7 +60,7 @@
 
     function life_expect (){
       if (sex=="f" || sex=="m"){
-        switch (sex){
+        switch (sex){                          
           case "f": 
             lifeSpan = 81 - age;
 
@@ -79,10 +79,11 @@
   function checkSex(sex){
        while(sex !== "m" || sex !== "f"){ 
         alert("Use only m or f");
-        sex = prompt("What is your gender? M or F only"); 
-        checkSex();
+        sex = prompt("What is your gender? M or F only");
+        sex = sex.toLowerCase();
+        // checkSex();
     }
-  }
+  }  
 </script>   
 </body>
 </html>
