@@ -15,22 +15,26 @@
   }
 
 //displaying platform, codename, name and version
+
   document.write("<br>");
   document.write("Browser platform: " + navigator.platform + "<br>");
   document.write("Browser code name: " + navigator.appCodeName + "<br>");
   document.write("Broswer name: " + navigator.appName + "<br>");
   document.write("Browser version: " + navigator.appVersion + "<br>");   
+  document.write("<br>");
 
 //prompting user for input to create variables
-  document.write("<br>");
+
   var name = prompt("What is your full name?");  
   var age = prompt("How old are you?");
-  var sex = prompt("What is your gender? M or F only");
+  var sex = prompt("What is your gender? m, M, f or F only.");
       sex = sex.toLowerCase();
 
-  if(sex !=="m" || sex !=="f") {
-    checkSex(sex);  
-    } 
+//commented out due to inability to figure out how to make this work
+
+  // if(sex !=="m" || sex !=="f") {
+  //   checkSex(sex);  
+  //   } 
 
 
 //creating the object method
@@ -42,7 +46,7 @@
     document.write(age + "<br>");
     document.write(sex + "<br>");
     document.write(remaining + "<br>"); 
-    document.write("Hello " +name+ ", as a " +age+ " year old " +sex+ " you are expected to live " +remaining+ " years!");
+    document.write("Hello " +name+ ", as a " +age+ " year old " +sex+ " you are expected to live " +remaining+ " more years!");
   }
 
   function person (name, age, sex) {  
@@ -76,15 +80,16 @@
     }
   }
 
-  function checkSex(sex){
-       while(sex !== "m" || sex !== "f"){ 
-        alert("Use only m or f");
-        sex = prompt("What is your gender? M or F only");
-        sex = sex.toLowerCase();
-        // checkSex();
-    }
-  }  
+//commented out due to inability to figure out in perscribed time and also causes a infinitate loop.
+
+  // function checkSex(sex){
+  //      while(sex != "m" || sex != "f"){ 
+  //       alert("Use only m or f");
+  //       sex = prompt("What is your gender? M or F only");
+  //       sex = sex.toLowerCase();
+  //       checkSex();
+  //   }
+  // }  
 </script>   
 </body>
 </html>
-
