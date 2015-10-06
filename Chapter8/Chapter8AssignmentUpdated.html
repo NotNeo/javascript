@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chapter 8 Assignment</title>
+</head>
+<body style="background-color: violet">
+<h1>Browser Settings:</h1> 
+<script type="text/javascript">
+//checking if java is enabled
+  if(navigator.javaEnabled){
+    document.write("Java is enabled!");
+  }
+  else {
+    document.write("Java is disabled!");
+  }
+
+
+//displaying platform, codename, name and version
+  document.write("<br>");
+  document.write("Browser platform: " + navigator.platform + "<br>");
+  document.write("Browser code name: " + navigator.appCodeName + "<br>");
+  document.write("Broswer name: " + navigator.appName + "<br>");
+  document.write("Browser version: " + navigator.appVersion + "<br>");   
+
+
+//prompting user for input to create variables
+  var name = "";
+  var age = "";
+  var sex = "";
+
+  getInput();
+  checkSex(sex);
+
+//creating the object method
+  var user = new person(name, age, sex); 
+  with (user) {
+    document.write("<br>Person's Properties: <br>");
+    document.write(name + "<br>");
+    document.write(age + "<br>");
+    document.write(sex + "<br>");
+    document.write(remaining + "<br>"); 
+    document.write("Hello " +name+ ", as a " +age+ " year old " +sex+ " you are expected to live " +remaining+ " more years!");
+  }
+
+
+  function person (name, age, sex) {  
+    this.name = name;
+    this.age = age;
+    if (sex=="m"){
+      this.sex = "Male";
+    }
+    else {
+      this.sex = "Female";
+    }
+    this.remaining = life_expect(); 
+    function life_expect (){
+      if (sex=="f" || sex=="m"){
+        switch (sex){                          
+          case "f": 
+            lifeSpan = 81 - age;
+            return lifeSpan;
+            break; 
+          case "m":
+            lifeSpan = 76 - age;
+            return lifeSpan;
+            break;
+        }
+      }
+    }
+  }
+
+  function getInput(){
+    name = prompt("What is your full name?");  
+    age = prompt("How old are you?");
+    sex = prompt("What is your gender? M or F only").toLowerCase();
+    //checkSex();
+  }
+
+  function checkSex(sex){
+    switch(sex) {
+      case "m":
+        break;
+      case "f":
+        break;
+      default:
+        alert("Please use m, M, f or F only.");
+        getInput();
+    }
+  }
+  
+</script>   
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chapter 10 Assignment</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function greenBackground() {
+      document.body.style.background = "#008000";
+    }
+    function whiteBackground() {
+      document.body.style.background = "#FFFFFF";
+    }
+    function message() {
+      alert("You clicked the button!");
+    }
+    function nameMessage() {
+      var nameBox = document.getElementById("name_box");
+      var name = document.getElementById("name_box").value;
+      alert("Name was changed to: " + name);
+      nameBox['value'] = "Sam";
+    }
+  </script>
+
+    <h1>Event Handlers at Work!</h1>
+
+    <h2>By <i>James Anderson II</i></h2>
+    <br>
+    <a href="http://www.google.com" onmouseover="greenBackground()" onmouseout="whiteBackground()">Search Here</a>
+    <br>
+    <input type="button" value="Click Me" onclick="message()"/>
+    <br>
+    My name is: <input type="text" value="Sam" onchange="nameMessage()" id="name_box"/>
+     Go ahead, change my name.
+    <br>
+    <input type="button" value="Reload" onclick="javascript: location.reload();"/>
+    <br>
+    <input type="button" value="My favorite site" onclick="javascript: window.open('http://www.css-tricks.com')">
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Purchase Order</title>
+</head>
+<body>
+  <h1>Online Purchase Order</h1>
+  <h2>Products</h2>
+  <br>
+  <label for="handTools">Hand Tools</label>
+  <select id="handTools" name="handTools">
+    <option value="choose"> Hand Tools </option>
+      <option value="saw">Saw</option>
+      <option value="hammer">Hammer</option>
+      <option value="screwDriver">Screw Driver</option>
+      <option value="wrench">Wrench</option>
+      <option value="pliers">Pliers</option>
+  </select>
+  
+  <label for="powerTools">Power Tools</label>
+  <select id="powerTools" name="powerTools">
+    <option value="choose"> Power Tools </option>
+      <option value="circularSaw">Circular Saw</option>
+      <option value="sabreSaw"> Sabre Saw</option>
+      <option value="drill"> Drill </option>
+      <option value="beltSander"> Belt Sander </option>
+      <option value="tableSaw"> Table Saw </option>
+  </select>
+
+  <label for="buildingSupplies">Building Supplies</label>
+  <select id="buildingSupplies" name="buildingSupplies">
+    <option value="choose"> Building Supplies </option>
+      <option value="plywood"> Plywood </option>
+      <option value="shingles"> Shingles </option>
+      <option value="nails"> Nails </option>
+      <option value="screws"> Screws </option>
+  </select>
+  <br>
+  
+    <script type="text/javascript">
+    //declaring variables and subcategories
+     var saw, hammer, screwdriver, wrench, pliers; //Handtools
+     var circularSaw, sabreSaw, drill, beltSander, tableSaw; //Power tools
+     var plywood, shingles, nails, screws; //Building Materials
+
+     function handTools(){
+      var type = document.getElementById('handTools'); //type select box
+      var handTools = {
+        saw: 'Saw',
+        hammer: 'Hammer',
+        screwDriver: 'Screw Driver',
+        wrench: 'Wrench',
+        pliers: 'Pliers'
+      };
+
+     };
+     </script>
+  <br>
+  <input id="submit" type="submit" value="Submit Order">
+
+</body>
+</html>
