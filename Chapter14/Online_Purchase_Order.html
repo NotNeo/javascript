@@ -36,7 +36,60 @@
       <option value="screws"> Screws </option>
   </select>
   <br>
-  
+  <h2>Customer Information</h2>
+    First Name <input type="text" placeholder="First Name" id="firstName"/>
+    Last Name <input type="text" placeholder="Last Name" id="lastName" />
+    <br>
+    <br>
+    Street Address 1 <input type="text" placeholder="Street Address 1" id="streetAddress1"/>
+    <br>
+    Street Address 2 <input type="text" placeholder="Street Address 2" id="streetAddress2"/>
+    <br>
+    <br>
+    City <input type="text" placeholder="City" id="city"/>
+    State <input type="text" placeholder="State" id="state"/>
+    Zip <input type="text" placeholder="Zip" id="zip"/>
+    <br>
+    <br>
+    Phone <input type="text" placeholder="Phone" id="phone"/>
+    Fax <input type="text" placeholder="Fax" id="fax"/>
+    <br>
+    <br>
+    Payment Method <input type="radio" value="Visa" id="visa">Visa</input>
+                   <input type="radio" value="Master Card" id="masterCard">Master Card</input>
+                   <input type="radio" value="American Express" id="amex">American Express</input>
+    <br>
+    <br>
+    Credit Card Number <input type="text" placeholder="Credit Card Number" id="creditCard"/>
+    <br>
+    <br>
+    Expiration Month <label for="expirationMonth">
+                      <select id="expirationMonth" name="expirationMonth">
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+    Expiration Year <label for="expirationYear">
+                      <select id="expirationYear" name="expirationYear">
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                      </select>
+
+
+
     <script type="text/javascript">
     //declaring variables and subcategories
      var saw, hammer, screwdriver, wrench, pliers; //Handtools
@@ -54,7 +107,9 @@
       };
 
      };
+
      </script>
+  <br>
   <br>
   <input id="submit" type="submit" value="Submit Order">
 
