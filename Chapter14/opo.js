@@ -87,4 +87,4 @@ var validateAll = function() {
 
 }
 
-submit.addEventListener('click', validateAll);
+//submit.addEventListener('click', validateAll);
