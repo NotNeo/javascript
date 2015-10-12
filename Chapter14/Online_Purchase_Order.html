@@ -8,7 +8,7 @@
   <h1>Online Purchase Order</h1>
   <h2>Products</h2>
   <br>
-  <form id="purchase_order" action="FormProcessor.html" method="get"/>
+  <form id="purchase_order" name="purchase_order" action="FormProcessor.html" method="get"/>
   <label for="handTools">Hand Tools</label>
   <select id="handTools" name="handTools">
     <option value="choose"> Hand Tools </option>
@@ -39,30 +39,30 @@
   </select>
   <br>
   <h2>Customer Information</h2>
-    First Name <input type="text" placeholder="First Name" id="firstName"/>
-    Last Name <input type="text" placeholder="Last Name" id="lastName" />
+    First Name <input type="text" placeholder="First Name" name="firstName"/>
+    Last Name <input type="text" placeholder="Last Name" name="lastName" />
     <br>
     <br>
-    Street Address 1 <input type="text" placeholder="Street Address 1" id="streetAddress1"/>
+    Street Address 1 <input type="text" placeholder="Street Address 1" name="streetAddress1"/>
     <br>
-    Street Address 2 <input type="text" placeholder="Street Address 2" id="streetAddress2"/>
-    <br>
-    <br>
-    City <input type="text" placeholder="City" id="city"/>
-    State <input type="text" placeholder="State" id="state"/>
-    Zip <input type="text" placeholder="Zip" id="zip"/>
+    Street Address 2 <input type="text" placeholder="Street Address 2" name="streetAddress2"/>
     <br>
     <br>
-    Phone <input type="text" placeholder="Phone" id="phone"/>
-    Fax <input type="text" placeholder="Fax" id="fax"/>
+    City <input type="text" placeholder="City" name="city"/>
+    State <input type="text" placeholder="State" name="state"/>
+    Zip <input type="text" placeholder="Zip" name="zip"/>
     <br>
     <br>
-    Payment Method <input type="radio" value="Visa" id="visa">Visa</input>
-                   <input type="radio" value="Master Card" id="masterCard">Master Card</input>
-                   <input type="radio" value="American Express" id="amex">American Express</input>
+    Phone <input type="text" placeholder="Phone" name="phone"/>
+    Fax <input type="text" placeholder="Fax" name="fax"/>
     <br>
     <br>
-    Credit Card Number <input type="text" placeholder="Credit Card Number" id="creditCard"/>
+    Payment Method <input type="radio" value="Visa" name="visa">Visa</input>
+                   <input type="radio" value="Master Card" name="masterCard">Master Card</input>
+                   <input type="radio" value="American Express" name="amex">American Express</input>
+    <br>
+    <br>
+    Credit Card Number <input type="text" placeholder="Credit Card Number" name="creditCard"/>
     <br>
     <br>
     Expiration Month <label for="expirationMonth">
