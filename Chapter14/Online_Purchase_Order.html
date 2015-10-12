@@ -2,13 +2,12 @@
 <html>
 <head>
   <title>Online Purchase Order</title>
-  <script language="javascript" type="text/javascript" src="opo.js"></script>
 </head>
 <body>
   <h1>Online Purchase Order</h1>
   <h2>Products</h2>
   <br>
-  <form id="purchase_order" name="purchase_order" action="FormProcessor.html" method="get"/>
+  <form id="purchase_order" name="purchase_order" action="FormProcessor.html" onsubmit="return validateAll()" method="get"/>
   <label for="handTools">Hand Tools</label>
   <select id="handTools" name="handTools">
     <option value="choose"> Hand Tools </option>
@@ -66,7 +65,7 @@
     <br>
     <br>
     Expiration Month <label for="expirationMonth">
-                      <select id="expirationMonth" name="expirationMonth">
+                      <select id="expirationMonth" id="expirationMonth">
                         <option value="01">01</option>
                         <option value="02">02</option>
                         <option value="03">03</option>
@@ -81,7 +80,7 @@
                         <option value="12">12</option>
                       </select>
     Expiration Year <label for="expirationYear">
-                      <select id="expirationYear" name="expirationYear">
+                      <select id="expirationYear" id="expirationYear">
                         <option value="2010">2010</option>
                         <option value="2011">2011</option>
                         <option value="2012">2012</option>
@@ -93,8 +92,9 @@
   <br>
   <br>
   <input id="submit" type="submit" value="Submit Order">  <!-- Submit Order Button -->
+  <input id="reset" type="reset" value="Reset Form">      <!-- Form Reset Button -->
   </form>
 
 </body>
-
+<script language="javascript" type="text/javascript" src="opo.js"></script>
 </html>
