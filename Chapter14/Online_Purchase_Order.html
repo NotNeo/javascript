@@ -104,9 +104,43 @@
         screwDriver: 'Screw Driver',
         wrench: 'Wrench',
         pliers: 'Pliers'
+        };
+
+      addEvent(type, 'change', function() {
+        if (this.value === 'choose') {
+          handTools.innerHTML = '<option>Please choose a type first</option>';
+          return;
+     }
+     var handTools = gethandTools(this.value);
+
+     var options = '<option>Please choose one first</option>';
+     for (var key in handTools) {
+        options += '<option value="' + key + '">' + handTools[key] + '</option>';
+     } //
+     handTools.innerHTML = //right where? i have no clue.  to loop through the other options in the object. 
+   ;
+
+     function powerTools(){
+      var type = document.getElementById('powerTools');
+      var powerTools = {
+        circularSaw: 'CirCular Saw',
+        sabreSaw: 'Sabre Saw',
+        drill: 'Drill',
+        beltSander: 'Belt Sander',
+        tableSaw: 'Table Saw'
       };
 
-     };
+     function buildingSupplies(){
+      var type = document.getElementById('buildingSupplies');
+      var buildingSupplies = {
+        plywood: 'Plywood',
+        shingles: 'Shingles',
+        nails: 'nails',
+        screws: 'screws'
+      };
+
+
+     //When user changes type select box
 
      </script>
   <br>
