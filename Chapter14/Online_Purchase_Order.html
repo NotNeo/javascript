@@ -7,7 +7,7 @@
   <h1>Online Purchase Order</h1>
   <h2>Products</h2>
   <br>
-  <form id="purchase_order" name="purchase_order" action="FormProcessor.html" onsubmit="return validateAll()" method="get"/>
+  <form id="purchase_order" name="purchase_order" action="FormProcessor.html" method="get"/>
   <label for="handTools">Hand Tools</label>
   <select id="handTools" name="handTools">
     <option value="choose"> Hand Tools </option>
@@ -56,16 +56,17 @@
     Fax <input type="text" placeholder="Fax" name="fax"/>
     <br>
     <br>
-    Payment Method <input type="radio" value="Visa" name="visa">Visa</input>
-                   <input type="radio" value="Master Card" name="masterCard">Master Card</input>
-                   <input type="radio" value="American Express" name="amex">American Express</input>
+    Payment Method <input type="radio" value="Visa" name="ccard">Visa</input>
+                   <input type="radio" value="Master Card" name="ccard">Master Card</input>
+                   <input type="radio" value="American Express" name="ccard">American Express</input>
     <br>
     <br>
-    Credit Card Number <input type="text" placeholder="Credit Card Number" name="creditCard"/>
+    Credit Card Number <input type="text" placeholder="Credit Card Number" name="creditCardNumber"/>
     <br>
     <br>
     Expiration Month <label for="expirationMonth">
-                      <select id="expirationMonth" id="expirationMonth">
+                      <select id="expirationMonth" name="expMonth">
+                        <option value="MO">MO</option>
                         <option value="01">01</option>
                         <option value="02">02</option>
                         <option value="03">03</option>
@@ -80,7 +81,8 @@
                         <option value="12">12</option>
                       </select>
     Expiration Year <label for="expirationYear">
-                      <select id="expirationYear" id="expirationYear">
+                      <select id="expirationYear" name="expYear">
+                        <option value="YEAR">YEAR</option>
                         <option value="2010">2010</option>
                         <option value="2011">2011</option>
                         <option value="2012">2012</option>
